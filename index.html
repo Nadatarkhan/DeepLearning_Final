@@ -1,0 +1,1098 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Is it Getting Hot in Here?
+        Global Changes in Extreme Weather
+    </title>
+    <meta content="Is it Getting Hot in Here? Global Changes in Extreme Weather" property="og:title">
+    <meta content="Climate change is approaching an irreversible state. The international community is acting to let countries all around the world adapt to the imminent climate challenge."
+          property="og:description"/>
+    <meta content="meta-tags/og-image.jpg" property="og:image">
+    <meta content="width=device-width, initial-scale=1" name=viewport>
+
+    <link rel="shortcut icon" href="img/favicon.png" />
+    <link href="https://fonts.googleapis.com/css?family=Crimson+Text:400,400i,700|Poppins" rel="stylesheet">
+    <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" rel="stylesheet">
+    <script crossorigin="anonymous" src="https://kit.fontawesome.com/67f90579cc.js"></script>
+    <link href="css/style.css" rel="stylesheet">
+    
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,800,500,600' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="css/set2.css" />
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.2.0/css/font-awesome.min.css" />
+    <link href="css/globeEvents.css" rel="stylesheet">
+
+    <style>
+
+
+        .spiral-title {
+            font-size: 26px; /*28px*/
+            fill: #C4C4C4; /*#4F4F4F;*/
+            font-weight: 300;
+            text-anchor: start;
+        }
+
+        .spiral-subtitle {
+            font-size: 14px;
+            fill: #AAAAAA;
+            font-weight: 300;
+            text-anchor: start;
+        }
+
+        .credit {
+            font-size: 12px;
+            fill: #AAAAAA;
+            font-weight: 300;
+            text-anchor: start;
+        }
+
+        .axis path,
+        .axis tick,
+        .axis line {
+            fill: none;
+            stroke: none;
+            /*shape-rendering: crispEdges;*/
+            shape-rendering: geometricPrecision;
+            /*shape-rendering: auto;*/
+        }
+
+        .axis {
+            font-size: 12px;
+            fill: #AAAAAA;
+            font-weight: 400;
+        }
+
+        .legendTitle {
+            font-size: 14px;
+            fill: #AAAAAA; /*#4F4F4F;*/
+            font-weight: 300;
+        }
+
+        .january {
+            font-size: 14px;
+            text-anchor: start;
+            font-weight: 300;
+            fill: #AAAAAA;
+        }
+
+        .yearText {
+            font-size: 18px;
+            text-anchor: start;
+            font-weight: 300;
+            fill: #AAAAAA;
+        }
+
+        .yearLine {
+            stroke: #AAAAAA;
+        }
+
+        .axisText {
+            fill: #C4C4C4;
+            font-size: 11px;
+            font-weight: 300;
+            text-anchor: middle;
+        }
+
+        .axisCircles {
+            fill: none;
+            stroke: #E8E8E8;
+            stroke-width: 1.25px; /* 1px */
+            /*shape-rendering: geometricPrecision;*/
+            /*shape-rendering: crispEdges;*/
+            shape-rendering: auto;
+        }
+
+        .line {
+            fill: none;
+            /*stroke: red;*/ /*lightgreen;*/
+            stroke-width: 2.3px; /*1.5px; 1.25px 2.5px 2.75*/
+            /*shape-rendering: crispEdges;*/
+            shape-rendering: geometricPrecision;
+        }
+
+        .path {
+            /*stroke: steelblue;*/
+            fill: none;
+            stroke-width: 3px;
+        }
+
+        .play {
+            font: 500 35px sans-serif; /* 40px */
+            fill: #e5e5e5;
+            cursor: pointer;
+        }
+
+        .play:hover {
+            fill: #ccc;
+        }
+
+
+
+    </style>
+
+
+</head>
+
+<body>
+<div class="loader">
+    <div class="dot"></div>
+    <div class="dot-a"></div>
+</div>
+
+<div id="cd-vertical-nav">
+    <ul>
+        <li>
+            <a href="#title"><span class="cd-dot"></span>
+                <span class="cd-label">Home</span>
+            </a>
+        </li>
+        <li>
+            <a href="#intro"><span class="cd-dot"></span>
+                <span class="cd-label">Why Care?</span>
+            </a>
+        </li>
+        <li>
+            <a href="#spiral"><span class="cd-dot"></span>
+                <span class="cd-label">Temperature Shifts</span>
+            </a>
+        </li>
+        <li>
+            <a href="#emissions"><span class="cd-dot"></span>
+                <span class="cd-label">Global Emissions</span>
+            </a>
+        </li>
+        <li>
+            <a href="#weather-events"><span class="cd-dot"></span>
+                <span class="cd-label">Extreme Weather</span>
+            </a>
+        </li>
+        <li>
+            <a href="#cdd-cities"><span class="cd-dot"></span>
+                <span class="cd-label">Cities Are Heating Up</span>
+            </a>
+        </li>
+        <li>
+            <a href="#cdd-models"><span class="cd-dot"></span>
+                <span class="cd-label">Cooling Demands</span>
+            </a>
+        </li>
+        <li>
+            <a href="#cooling-exposure"><span class="cd-dot"></span>
+                <span class="cd-label">Exposure Risk</span>
+            </a>
+        </li>
+        <li>
+            <a href="#conclusion"><span class="cd-dot"></span>
+                <span class="cd-label">What We Can Do</span>
+            </a>
+        </li>
+        <li>
+            <a href="#about"><span class="cd-dot"></span>
+                <span class="cd-label">About</span>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+<section id="title">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
+                <h1 class="main-title">Is it Getting Hot in Here? <img src="Icons/earth-globe.svg" style="width: 11%; filter: invert(100%) contrast(200%)"></h1>
+                <h2 class="main-subtitle">Global Changes in Extreme Weather</h2>
+            </div>
+        </div>
+        <br>
+        <div class="row icon-row">
+            <div class="col">
+                <div class="row icon-elem">
+                    Global
+                </div>
+                <div class="row icon-elem">
+                    <img src="Icons/GLOBAL.png", alt="Global icon" style="height: 200px; width: 200px">
+                </div>
+            </div>
+            <div class="col">
+                <div class="row icon-elem">
+                    Cities
+                </div>
+                <div class="row icon-elem">
+                    <img src="Icons/cities2.png", alt="Global icon" style="height: 200px; width: 200px">
+                </div>
+            </div>
+            <div class="col">
+                <div class="row icon-elem">
+                    Humans
+                </div>
+                <div class="row icon-elem">
+                    <img src="Icons/human.png", alt="Global icon" style="height: 200px; width: 200px">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="navbar navbar-inverse navbar-static-top" id="nav">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse" type="button">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse">
+
+                <ul class="nav navbar-nav">
+                    <li style="display: inline"><a href="#spiral" style="font-size: 20px; color: black">Global Shifts</a></li>
+                    <li style="display: inline"><a href="#cdd-cities" style="font-size: 20px; color: black">Cities</a></li>
+                    <li style="display: inline"><a href="#cooling-exposure" style="font-size: 20px; color: black">Humans</a></li>
+                </ul>
+            </div><!--/.nav-collapse -->
+        </div><!--/.container -->
+    </div><!--/.navbar -->
+
+
+</section>
+
+<!--<div class="col-lg-2">-->
+<!--    <div class="sidebar">-->
+<!--        <div class="space-bottom"><a class="anchor" href="#title"-->
+<!--                                     style="padding-left: 25% ">Home</a>-->
+<!--        </div>-->
+<!--        <div class="space-bottom"><a class="anchor" href="#part1"-->
+<!--                                     style="padding-left: 25%">Temp Anomaly</a>-->
+<!--        </div>-->
+<!--        <div class="space-bottom"><a class="anchor" href="#part2"-->
+<!--                                     style="padding-left: 25%">Emissions</a>-->
+<!--        </div>-->
+<!--        <div class="space-bottom"><a class="anchor" href="#part3"-->
+<!--                                     style="padding-left: 25%;">Global Temp</a>-->
+<!--        </div>-->
+
+
+<!--    </div>-->
+<!--</div>-->
+<section class="section-template" id="intro">
+    <div class="section-container intro-section">
+        <div class="col">
+            <div class="row intro-row">
+                <div class="col section-col">
+                    <p style="font-size: 24px">
+                        <br>
+                        <br>
+                        In recent years, we have grown used to climate records being broken on a regular basis. While this may seem unimportant at first, it is, in fact, largely attributable to climate change.
+                        <br>
+                        <br>
+                        As the drivers of climate change go unperturbed, the prevalence of climate records and extreme weather events is expected to increase.
+                        <br>
+                        <br>
+                        Through this data story, we draw upon changes in extreme weather and their impact on society at three levels of analysis: the global level, the city level, and the human level.
+                        <br>
+                        <br>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section-template" id="spiral">
+    <div class="section-container">
+        <div class="col">
+            <div class="row section-image-row" style="overflow: hidden;">
+               <img src="img/earth2.png">
+                <div class="overtext" style="font-size: 60px;  width: 90%; margin-left: 5%; margin-right: 5%; margin-top: 5%; text-align: center">Climate change could be irreversible by 2030</div>
+            </div>
+                </div>
+            <div class="row section-text-row">
+                <div class="col section-col">
+                    <h1 class="section-text" style="width: 90%; margin-right: 5%; margin-left: 5%;">
+                        "The last seven years have been the warmest seven years on record.“ <br> <p style="font-size: 30px;text-align: center"> <i style="color: white">- <a href="https://en.wikipedia.org/wiki/Gavin_Schmidt" class="links" style="color: lightblue; font-weight: bold" target="_blank">Gavin Schmidt</a>, Director of the <a href="https://www.giss.nasa.gov/" class="links" style="color: lightblue; font-weight: bold" target="_blank">Goddard Institute for Space Studies.</a></i></p>
+                    </h1>
+                </div>
+            </div>
+            <div class="row section-vis-row">
+                <div class="col section-col">
+                    <div class="row" style="background: var(--text-dark)">
+                        <div class="col section-col">
+                            <div class="row" style="margin-left: 15%;">
+                                <div style="margin-left: 8%;"><h4 style="color: whitesmoke">Global Temperature Anomaly</h4>
+                                    <h5  style="color: whitesmoke">
+                                        Global temperatures have been on a steady increase. The below animation captures these shifts from 1850 to 2020.
+                                    </h5>
+                                </div>
+                            </div>
+                            <div class="row" style="width: 110%; margin-left: 5%; margin-top: 0%; margin-right: auto;" id="weatherRadial"></div>
+                        </div>
+                        <div class="col section-col">
+                            <div class="row" style="width: 65%; margin-left: auto; margin-right: auto; margin-top: 25%; color:white">
+                                According to NOAA's &nbsp; <a href="https://www.ncdc.noaa.gov/sotc/global/202013" style="color: #ce6d5a; font-weight: bold" class="links" target="_blank">2020 Annual Climate Report</a> the combined land
+                                and ocean temperature has increased at an average rate of 0.13 °F (0.08 °C) per decade since 1880. <br>
+                                <br>
+                                However, the average rate of increase since 1981 (0.18 °C / 0.32 °F) has been more than twice that rate.
+                                <br>
+                                <br>
+                                <div style="display: inline">
+                                    The <a href="https://en.wikipedia.org/wiki/Intergovernmental_Panel_on_Climate_Change" style="color: #ce6d5a; font-weight: bold" class="links" target="_blank">Intergovernmental Panel on Climate Change</a> stated in their <a href="https://www.ipcc.ch/assessment-report/ar6/" style="color: #ce6d5a; font-weight: bold" class="links" target="_blank">2021 Climate Report</a> that temperature increases of 1.5-2 °C will occur unless "<i style="color: lightgray">massive and immediate cuts in greenhouse gas emissions are made</i>", along with other adverse consequences.<br> <br></div>
+
+<!--                                <iframe width="650" height="350" src="https://www.youtube.com/embed/GxifH9WBKGQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section-template" id="emissions">
+    <div class="section-container">
+        <div class="col">
+            <div class="row section-image-row" style="overflow: hidden;">
+                <img src="img/smog.png">
+                <div class="overtext" style="font-size: 60px;  width: 80%; margin-left: 10%; margin-right: 10%; margin-top: 5%; text-align: center">How have increased emissions impacted global temperatures?</div>
+            </div>
+        </div>
+        <div class="row section-text-row">
+            <div class="col section-col">
+                <h1 class="section-text" style="width: 80%; margin-left: 10%; margin-right: 10%;">
+
+                    Temperature increases are largely attributable to greenhouse gas emissions, in particular CO<sub>2</sub> emissions.
+                    <br>
+                    <br>
+                    Just five countries — including the United States — create more than 50% of the global CO<sub>2</sub> emissions.
+                </h1>
+            </div>
+        </div>
+    </div>
+
+        <div class="row section-vis-row">
+            <div class="col section-col">
+                <div class="row">
+                    <div style="margin-left: 8%;"><h4 style="color: whitesmoke">2020 CO2 Emissions by Country</h4>
+                        <h5  style="color: whitesmoke">
+                            Emission trajectories over time are highlighted below, outlining the largest global contributors. 
+                        </h5>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col section-col">
+                        <div class="row justify-content-center" style="height:50vh; width: 125vh">
+                            <div id="global-emissions-stacked-area-chart" style="height: 100%; width: 100%"></div>
+                        </div>
+                    </div>
+                    <div class="col section-col">
+                        <div class="row" style="font-size: 1em; width: 65%; margin-left: 25%; margin-top: 5%; margin-right: 5%; color:white">
+                            <div style="">In <a href="https://books.google.com/books/about/Something_New_Under_the_Sun_An_Environme.html?id=D4dOq9Llo_gC" style="word-wrap: break-word; color: #ce6d5a; font-weight: bold" class="links" target="_blank"><i>"An Environmental History of the 20th World"</i></a>, environmental historian <a href="https://en.wikipedia.org/wiki/J._R._McNeill" class="links" style="color: #ce6d5a; font-weight: bold" target="_blank">J. R. McNeill</a> remarks that during the late 19th century through to the end of the
+                            20th century, the world economy grew 14-fold, world population quadrupled, and energy consumption increased five-fold. These stark changes were brought about by the invention of artificial fertilizer, medicines and vaccines, as well as industrialization which massively improved human productivity. However, these changes also
+                            resulted in an exponential increase in carbon dioxide, as well as <a href="https://en.wikipedia.org/wiki/Greenhouse_gas_emissions" style="color: #ce6d5a; font-weight: bold" class="links" target="_blank">other emissions</a>.</div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col section-col">
+                        <div class="row main-text" style="width: 85%; margin-left: 10%; margin-right: 5%; color:white">
+                            Some countries are responsible for more emissions than others, either historically or in the current day. Because of this, and because the atmosphere is a "public good" (everyone shares this resource since everyone breathes!), deciding how to deal with emissions is complicated.
+                            On the one hand, countries likely do not want other countries polluting their air, but at the same time, would prefer not to invest in reducing their own emissions if it dampens their economic outlook. Also, some countries may feel entitled to pollute, claiming it is a necessary stage
+                            in industrial development until a certain level of GDP is reached. No matter what view is held, one thing is at least clear to everyone: emissions are increasing.
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <br>
+            </div>
+        </div>
+    </div>
+
+    <div class="section-container">
+        <div class="row section-text-row">
+            <div class="col section-col">
+                <h1 class="section-text" style="width: 90%; margin-left: 5%; margin-right: 5%;">
+
+                    Extreme weather events – particularly heatwaves and droughts – have become more frequent since 1950 and will become more frequent and severe as global temperatures increase.
+                </h1>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<!--                Threejs Globe-->
+
+<section class="section-template" id="weather-events">
+    <div class="row section-image-row" style="overflow: hidden;">
+        <img src="img/wildfire.png">
+        <div class="overtext" style="font-size: 60px;  width: 90%; margin-left: 5%; margin-right: 5%; margin-top: 5%; text-align: center">What are the types of extreme weather events occurring globally?</div>
+    </div>
+
+    <div class="row section-vis-row">
+    <p>
+    <div class="section-col" style="margin-left: 10%; width: 100%; text-align: left; color: whitesmoke"><h4 style="color: whitesmoke">Extreme Weather Events: Global Explorer</h4>
+        <h5 style="color: whitesmoke">
+           Extreme weather events are becoming more and more frequent across the world. The below visual allows users to explore the time period as well as event type. 
+        </h5>
+    </div>
+</div>
+<div class="flex-grid section-vis-row" style="margin-bottom: 0%">
+    <div class="flexCol" id="globe" style="margin-left: 8%;">
+        <button class="eventDateButton" id="reset" style="width: 15%; margin-left: 16%"> Reset Globe</button>
+        <canvas height="500" width="600">
+
+        </canvas>
+    </div>
+    <div class="flexCol">
+        <div class="row" style="padding-top: 25px"> The globe shows &nbsp; <span
+                style="color: #c26565; font-weight: bold">252 extreme weather events</span> across the world for which
+            scientists have carried out attribution studies.
+        </div>
+
+        <div class="row">Of these events,&nbsp; <span style="color: #c26565; font-weight: bold">92%</span> &nbsp;were
+            within the past decade.
+        </div>
+        <!--        <div class="row"> Select a date range below and toggle the weather event types to view the number of each event type.-->
+        <!--        </div>-->
+
+        <div class="row" style="padding-top: 30px">
+            <!--            <div style="padding-right: 5px; padding-bottom: 10px"> Time Period</div>-->
+            <div style="padding-left: 10px"></div>
+            <button class="eventDateButtonFocus" id="AllDates"> All</button>
+            <div style="padding-right: 10px"></div>
+            <button class="eventDateButton" id="pre2011"> 1950 - 2011</button>
+            <div style="padding-right: 10px"></div>
+            <button class="eventDateButton" id="post2011"> 2011 - 2020</button>
+        </div>
+        <div style="padding-top: 30px"></div>
+        <div style="font-weight: bolder">Event Type</div>
+        <div class="flex-grid">
+            <div class="col">
+                <div style="padding-bottom: 10px"></div>
+                <button class="row small-font eventTypeButton" id="firesButton" style="padding-right: 5px; "> 🔥 &nbsp;&nbsp;Wildfire
+                </button>
+                <div style="padding-bottom: 10px"></div>
+                <button class="row small-font eventTypeButton" id="stormButton">🌩 &nbsp;&nbsp;Storm
+                </button>
+                <div style="padding-bottom: 10px"></div>
+                <button class="row small-font eventTypeButton" id="droughtButton"> 💧️ &nbsp;&nbsp;Drought
+                </button>
+
+
+            </div>
+            <div class="col">
+                <div style="padding-bottom: 10px"></div>
+                <button class="row small-font eventTypeButton" id="heatButton"> 🌡 &nbsp; &nbsp;Heat
+                </button>
+                <div style="padding-bottom: 10px"></div>
+                <button class="row small-font eventTypeButton" id="sunButton"> ☀️ &nbsp;&nbsp;Sun
+                </button>
+                <div style="padding-bottom: 10px"></div>
+                <button class="row small-font eventTypeButtonFocus" id="allEvents"> 🌍️ &nbsp;&nbsp;All
+                </button>
+            </div>
+        </div>
+
+        <div class="flex-grid">
+            <div class="row">
+
+                <div class="col">
+                    <div style="font-weight: bolder">Number of Events</div>
+
+                    <div id="numEvents" style="color:#c26565; font-size: 40px; font-weight: bolder"> 252</div>
+                </div>
+
+                <div class="col">
+                    <div style="font-weight: bolder" id="eventHeader">Weather Events</div>
+                    <div style="font-size: 15px; margin-right: 20px" id ="eventCaption"> The different symbols show the type of extreme weather event.</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+</section>
+
+
+
+<!--        </Part2>-->
+
+<section class="section-template" id="cdd-cities">
+    <div class="section-container">
+        <div class="col">
+            <div class="row section-image-row">
+                <img src="img/city.png">
+                <div class="overtext" style="font-size: 60px; width: 80%; left: 10%; top: 10%; text-align: center;">What are the Challenges facing Cities?</div>
+            </div>
+            <div class="row section-text-row">
+                <div class="col section-col">
+                    <h1 class="section-text" style="width: 80%; margin-left: 10%; margin-right: 10%;">
+                        Cities are major contributors to climate change. According to UN Habitat, cities consume 78% of the world’s energy and produce more than 60% of greenhouse gas emissions.
+                        Yet, they account for less than 2% of the Earth’s surface.
+                    </h1>
+                </div>
+            </div>
+            <div class="row model-vis-row">
+                <div class="col section-col" style="color: black;">
+                    <div class="row">
+                        <div class="col">
+                            <p>
+
+                            <div><h4 style="width: 90%; margin-left: 5%; margin-right: 5%">Cooling Degree Day Increases across major cities:</h4>
+                            <h5 style="width: 90%; margin-left: 5%; margin-right: 5%">
+                                One of the biggest challenge cities will face is providing cooling in a warming climate. The concept of Cooling Degree Days (CDD), shown below for different cities, is primarily used to estimate the amount of active cooling needed to maintain a comfortable indoor temperature.
+                                Degree days represent the number of degrees the daily average temperature is above 65°F. Below we use climate projections for 2050 and 2080 to generate predictions on how much CDDs will increase. We see that in warmer climates, the impact will be much larger than in moderate climates
+                            </h5>
+                                <div class="row" style="margin-left: 21%">
+                                    <button type="button" class="btn btn1" id="btn-2020" onclick="update('2020 CDD')">Current</button>
+                                    <button type="button" class="btn btn1" id="btn-2050" onclick="update('2050 CDD')">2050 Projections</button>
+                                    <button type="button" class="btn btn1" id="btn-2080" onclick="update('2080 CDD')">2080 Projections</button></h4>
+                                </div>
+
+                                <!-- graph -->
+                                <div class="row justify-content-center" style="height: 65vh">
+                                    <div id="CDD" style="padding-bottom: 100px" style="font-size:15px"></div><br>
+                                </div>
+                            </p>
+                    
+                        </div>
+                        <div class="col">
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section-template" id="cdd-models">
+    <!-- City Images -->
+                <div class="row model-vis-row">
+                    <div class="col section-col">
+                        <div class="row">
+                            <div class="col">
+                <div class="row section-image-row" style="padding-top: 10px">
+                <img src="img/AC.png">
+                <div class="overtext" style="font-size: 60px; width: 80%; margin-left: 10%; margin-right: 10%; margin-top: 5%;">How will we navigate the cooling challenge?</div>
+                </div>
+                                <div class="col">
+                                </div>
+                                <p>
+                                <div> <h4 style="width: 90%; margin-left: 5%; margin-right: 5%">Cooling Exposure: City Matrix</h4>
+                                    <h5 style="width: 90%; margin-left: 5%; margin-right: 5%">
+                                Worldwide power consumption for air conditioning alone is forecast to surge 33x by 2100 as developing world incomes rise and urbanisation advances. But will cooling adoption be experienced evenly across the world? Below we introduce Cooling Degree Day exposure which factors in city populations to reflect the magnitude of challenge that cities will face. We also reflect on Country Income level and Climate type to set the stage for what is a more realistic outlook on the factors contributing to the cooling challenge.</h5>
+                                </p>
+                                </div>
+                                <div class="content">
+                                    <div class="row justify-content-center"><img src="img/arrow.png" alt="imgNY"/>
+                                        <div class="grid column">
+                                            <figure class="effect-julia">
+                                                <img src="img/CH.png" alt="imgCH"/>
+                                                <figcaption>
+                                                    <h2>Chicago<span>,US</span></h2>
+                                                    <div>
+                                                        <p>Total CDD Exposure(in billions): 0.5  </p>
+                                                        <p>Country Income Classification: High </p>
+                                                        <p>Current Households with ACs (country-wide): 90% </p>
+                                                        <p>Climate Classification: Humid continental </p>
+                                                    </div>
+                                                </figcaption>
+                                            </figure>
+                                            <figure class="effect-julia">
+                                                <img src="img/NY.png" alt="imgNY"/>
+                                                <figcaption>
+                                                    <h2>New York<span>,US</span></h2>
+                                                    <div>
+                                                        <p>Total CDD Exposure(in billions): 2.0 </p>
+                                                        <p>Country Income Classification: High  </p>
+                                                        <p>Current Households with ACs (country-wide): 90% </p>
+                                                        <p>Climate Classification: Humid subtropical </p>
+                                                    </div>
+                                                </figcaption>
+                                            </figure>
+                                            <figure class="effect-julia">
+                                                <img src="img/SF.png" alt="imgSF"/>
+                                                <figcaption>
+                                                    <h2>San Francisco<span>,US</span></h2>
+                                                    <div>
+                                                        <p>Total CDD Exposure(in billions): 0.3</p>
+                                                        <p>Country Income Classification: High  </p>
+                                                        <p>Current Households with ACs (country-wide): 90% </p>
+                                                        <p>Climate Classification: Mediterranean</p>
+                                                    </div>
+                                                </figcaption>
+                                            </figure>
+                                            <figure class="effect-julia">
+                                                <img src="img/tokyo.png" alt="imgSF"/>
+                                                <figcaption>
+                                                    <h2>Tokyo<span>,Japan</span></h2>
+                                                    <div>
+                                                        <p>Total CDD Exposure(in billions): 39.5</p>
+                                                        <p>Country Income Classification: High middle</p>
+                                                        <p>Current Households with ACs (country-wide): 89%</p>
+                                                        <p>Climate Classification: Temperate</p>
+                                                    </div>
+                                                </figcaption>
+                                            </figure>
+                                            <figure class="effect-julia">
+                                                <img src="img/jakarta.png" alt="imgSF"/>
+                                                <figcaption>
+                                                    <h2>Jakarta<span>,Indonesia</span></h2>
+                                                    <div>
+                                                        <p>Total CDD Exposure(in billions): 74.6</p>
+                                                        <p>Country Income Classification: Lower middle</p>
+                                                        <p>Current Households with ACs (country-wide): 7%</p>
+                                                        <p>Climate Classification: Tropical rainforest </p>
+                                                    </div>
+                                                </figcaption>
+                                            </figure>
+                                            <figure class="effect-julia">
+                                                <img src="img/mumbai.jpg" alt="imgSF"/>
+                                                <figcaption>
+                                                    <h2>Mumbai<span>,India</span></h2>
+                                                    <div>
+                                                        <p>Total CDD Exposure(in billions): 74.6</p>
+                                                        <p>Country Income Classification: Lower middle</p>
+                                                        <p>Current Households with ACs (country-wide): 7%</p>
+                                                        <p>Climate Classification: Tropical Savanna  </p>
+                                                    </div>
+                                                </figcaption>
+                                            </figure>
+                                            <figure class="effect-julia">
+                                                <img src="img/bang.png" alt="img"/>
+                                                <figcaption>
+                                                    <h2>Bangkok<span>,Thailand</span></h2>
+                                                    <div>
+                                                        <p>Total CDD Exposure(in billions): 37</p>
+                                                        <p>Country Income Classification: Upper middle</p>
+                                                        <p>Current Households with ACs (country-wide): 72%</p>
+                                                        <p>Climate Classification: Tropical Savanna</p>
+                                                    </div>
+                                                </figcaption>
+                                            </figure>
+                                            <figure class="effect-julia">
+                                                <img src="img/lagos.png" alt="imgSF"/>
+                                                <figcaption>
+                                                    <h2>Lagos<span>,Nigeria</span></h2>
+                                                    <div>
+                                                        <p>Total CDD Exposure(in billions):42.3</p>
+                                                        <p>Country Income Classification: Lower middle</p>
+                                                        <p>Current Households with ACs (country-wide): 5%</p>
+                                                        <p>Climate Classification: Tropical Savannah</p>
+                                                    </div>
+                                                </figcaption>
+                                            </figure>
+                                            <figure class="effect-julia">
+                                                <img src="img/karachi.png" alt="imgSF"/>
+                                                <figcaption>
+                                                    <h2>Karachi<span>,Pakistan</span></h2>
+                                                    <div>
+                                                        <p>Total CDD Exposure(in billions): 51.6</p>
+                                                        <p>Country Income Classification: Lower Middle </p>
+                                                        <p>Current Households with ACs (country-wide): 6%</p>
+                                                        <p>Climate Classification: Tropical/Temperate </p>
+                                                    </div>
+                                                </figcaption>
+                                            </figure>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+        </div>
+    </div>
+    </div>
+</section>
+
+
+    <!--                Part 3-->
+    <section class="section-template" id="cooling-exposure">
+        <div class="section-container">
+            <div class="col">
+                <div class="row section-image-row">
+                    <img src="img/people.png">
+                    <div class="overtext" style="font-size: 60px; width: 80%; margin-left: 10%; margin-right: 10%; margin-top: 10%;">What Impacts will increasesing temperatures have on humans?
+                    </div>
+                </div>
+                <div class="row section-text-row">
+                    <div class="col section-col">
+                        <h1 class="section-text" style="width: 82%; margin-left: 9%; margin-right: 9%">
+                            The growing number of people in cities and an increasing elderly population have increased heat-related deaths, according to a 2018 study in The Lancet
+                        </h1>
+                    </div>
+                </div>
+                <div class="row section-vis-row">
+                    <div class="col section-col">
+                        <div class="row">
+                            <div class="col">
+                                <p>
+                                <div><h4 style="color: whitesmoke; width: 84%; margin-left: 8%; margin-right: 8%">Heat Related Deaths and Access to Electricity</h4>
+                                    <h5 style="color: whitesmoke; width: 84%; margin-left: 8%; margin-right: 8%">
+As the cooling challenge story unfolds, we look to investigate two key questions across global regions: How many people do not have access to electricity (which would be used for cooling) and the number
+                                    of heat related deaths. The below icons are double coded to provide insight into this. The number of deaths is representative of the 2000-2019 time period, while
+                                    the access to electricity only looks at data from 2019. Can a correlation be made?</h5>
+                                    </p>
+
+
+                                </div>
+
+                                <div class="row" style="padding-top: 30px; padding-bottom: 30px">
+                                    <!--            <div style="padding-right: 5px; padding-bottom: 10px"> Time Period</div>-->
+                                    <div style="padding-left: 15%"></div>
+                                    <button class="heatDateButtonFocus" id="heatBtn"> Heat Related Deaths</button>
+                                    <div style="padding-right: 10px"></div>
+                                    <button class="heatDateButton" id="elecBtn"> Access to Electricity</button>
+                                </div>
+
+                                <div class="row" style="padding-left: 10%">
+
+
+                                    <div class="col">
+                                        <div class="row" style="padding-left: 100px">
+                                            <div class="col">
+                                                <div class="fa fa-user americas fa-3x" id="americas"></div>
+                                                <div id="americasT" class="countryName americas">Americas</div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="fa fa-user fa-3x europe" id="europe"></div>
+                                                <div id="europeT" class="countryName europe">Europe</div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="fa fa-user fa-3x africa" id="africa"></div>
+                                                <div id="africaT" class="countryName africa">Africa</div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="fa fa-user fa-3x asia" id="asia"></div>
+                                                <div id="asiaT" class="countryName asia">Asia</div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="fa fa-user fa-3x oceania" id="oceania"></div>
+                                                <div id="oceaniaT" class="countryName oceania">Oceania</div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="fa fa-user fa-3x global" id="globalPeople"></div>
+                                                <div id="globalT" class="countryName global">Global</div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="col">
+                                        <h4 id="peopleText" style="padding-left: 4%; color: whitesmoke"> Global </h4>
+                                        <div id="mainNum"
+                                             style=" color: #c26565; font-weight: bolder; float:left; padding-left: 4%; padding-right: 10%;">
+                                            489,075&nbsp;&nbsp;&nbsp;&nbsp;
+                                        </div>
+                                        <span id="mainPer" style="color: #c26565;font-weight: normal">(11%)</span>
+                                        <!--                                <p id="peopleText"> REPLACE WITH VIS INTERACTIONS </p>-->
+                                        <!--                                <p id="peopleText"> REPLACE WITH VIS INTERACTIONS </p>-->
+                                        <br><br>
+
+
+                                        <div class="row" style="padding-left: 2%">
+                                            <div class="col">
+                                                <h5 id="subdiv1" style="color: whitesmoke"> Global </h5>
+                                                <div class="numDeaths" id="num1">
+                                                    489,075&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                </div>
+
+                                                <span class="perDeath"
+                                                      id="per1">(11%)</span>
+
+                                                <br><br>
+                                                <h5 id="subdiv2" style="color: whitesmoke"> Global </h5>
+                                                <div class="numDeaths" id="num2">
+                                                    489,075&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                </div>
+
+                                                <span class="perDeath"
+                                                      id="per2">(11%)</span>
+
+                                                <br><br>
+                                                <h5 id="subdiv5" style="color: whitesmoke"> Global </h5>
+                                                <div class="numDeaths" id="num5">
+                                                    489,075&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                </div>
+
+                                                <span class="perDeath"
+                                                      id="per5">(11%)</span>
+
+                                            </div>
+
+                                            <div class="col">
+                                                <h5 id="subdiv3" style="color: whitesmoke"> Global </h5>
+                                                <div class="numDeaths" id="num3">
+                                                    489,075&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                </div>
+
+                                                <span class="perDeath"
+                                                      id="per3">(11%)</span>
+
+                                                <br><br>
+                                                <h5 id="subdiv4" style="color: whitesmoke"> Global </h5>
+                                                <div class="numDeaths" id="num4">
+                                                    489,075&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                </div>
+
+                                                <span class="perDeath"
+                                                      id="per4">(11%)</span>
+
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    </section>
+
+
+</section>
+
+
+<section class="section-template" id="conclusion">
+    <div class="section-container intro-section">
+        <div class="col">
+            <div class="row intro-row">
+                <div class="col section-col">
+                    <p style="font-size: 24px; width: 90%; margin-left: 0%; margin-right: 5%">
+
+                        <div><h4 style="color: whitesmoke;">What Should be Done?</h4>
+                                    <h5 style="color: whitesmoke;"> There is no singular solution to navigating the next wave of challenges. But a focus on proven and tested intervention strategies is imperative. To alleviate the many climatic challenges, cities must design with mitigation and adaptation in mind. Below are a few recommendations that tackle different intervention categories.</h5>
+                                    </p>
+
+
+                                </div>
+                        
+
+                         <img src="img/last.png" style="width: 96%; margin-left: 2%; margin-right: 2%">
+                        <br>
+                        <br>
+                      
+                        <br>
+                        <br>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    
+    
+
+
+
+    <section class="scuro" id="about">
+    <div id="projects">
+        <div class="container">
+            <div class="space-top"></div>
+            <div class="row">
+                <div class="col-lg">
+                    <h2 class="sec-header-white">Our Team</h2>
+
+
+                </div>
+                <div class="grid" id="proj-gallery" style="margin-bottom: 2em;">
+
+
+                    <div class="bio-card">
+                        <img alt="About Me Picture" class="img-fluid corner-round space-bottom card-image"
+                             src="img/about/alejandro.jpg" style="width: 25%; height: auto">
+
+                        <div class="card-name">
+                            Alejandro Romero
+                        </div>
+
+                        <div class="card-text">
+                            Master's student at Brown with coursework at Harvard. His research involves exploring the future of human-computer interaction using mixed reality.
+                        </div>
+                        <div class="social">
+                            <a class="fa fab fa-github" href="https://github.com/alejandrojromero" style="color:grey"
+                               target="_blank"></a>
+                            <a class="fa fa-linkedin" href="https://www.linkedin.com/in/alejandrojromero/"
+                               style="color:grey" target="_blank"></a>
+                            <a class="fa fa-desktop" href="https://alejandroromero.me/" style="color:grey"
+                               target="_blank">
+                            </a>
+                        </div>
+
+                    </div>
+
+
+                    <div class="bio-card">
+                        <img alt="About Me Picture" class="img-fluid corner-round space-bottom card-image"
+                             src="img/about/matt.jpg" style="width: 25%; height: auto">
+
+                        <div class="card-name">
+                            Matthew Stewart
+                        </div>
+
+                        <div class="card-text">
+                            Ph.D. Candidate in Engineering Sciences and Data Science at Harvard University, developing intelligent chemical sensing systems to study chemical emissions in the tropical Amazonian rainforest.
+                        </div>
+                        <div class="social">
+                            <a class="fa fab fa-github" href="https://github.com/mrdragonbear" style="color:grey"
+                               target="_blank"></a>
+                            <a class="fa fa-linkedin" href="https://www.linkedin.com/in/matthew-stewart-09255289/"
+                               style="color:grey" target="_blank"></a>
+                            <a class="fa fa-desktop" href="https://mpstewart.net/" style="color:grey" target="_blank">
+                            </a>
+                        </div>
+
+                    </div>
+
+
+                    <div class="bio-card">
+                        <img alt="About Me Picture" class="img-fluid corner-round space-bottom card-image"
+                             src="img/about/nada.jpg" style="width: 25%; height: auto">
+
+                        <div class="card-name">
+                            Nada Tarkhan
+                        </div>
+
+                        <div class="card-text">
+                            Ph.D. Student in Building Technology at the Massachusetts Institute of Technology.
+                        </div>
+                        <div class="social">
+                            <a class="fa fab fa-github" href="https://github.com/Nadatarkhan" style="color:grey"
+                               target="_blank"></a>
+                            <a class="fa fa-linkedin" href="https://www.linkedin.com/in/nada-tarkhan-b9040071/"
+                               style="color:grey" target="_blank"></a>
+                            <a class="fa fa-desktop" href="https://www.nadatarkhan.com/" style="color:grey"
+                               target="_blank">
+                            </a>
+                        </div>
+
+                    </div>
+
+                    <div class="bio-card">
+                        <img alt="About Me Picture" class="img-fluid corner-round space-bottom card-image"
+                             src="img/about/max.jpg" style="width: 25%; height: auto">
+
+                        <div class="card-name">
+                            Max Urbany
+                        </div>
+
+                        <div class="card-text">
+                            Student pursuing a Master's of Data Science at Harvard University.
+                        </div>
+                        <div class="social">
+                            <a class="fa fab fa-github" href="https://github.com/murbany" style="color:grey"
+                               target="_blank"></a>
+                            <a class="fa fa-linkedin" href="https://www.linkedin.com/in/maximilian-urbany-766086123/"
+                               style="color:grey" target="_blank"></a>
+                            <a class="fa fa-desktop" href="https://www.linkedin.com/in/maximilian-urbany-766086123/" style="color:grey" target="_blank">
+                            </a>
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+</section>
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/index.js"></script>
+<script defer src="js/viz.js"></script>
+<script defer src="js/timeline-static.js"></script>
+<script src='js/jquery.vide.js'></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+<script src="js/jquery.counterup.min.js"></script>
+<script>
+    jQuery(document).ready(function ($) {
+        $('.ind').counterUp({
+            delay: 30,
+            time: 5000
+        });
+    });
+</script>
+<script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+
+<script>
+
+    window.onscroll = function () {
+        myFunction()
+    };
+
+    function myFunction() {
+        var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        var scrolled = (winScroll / height) * 100;
+        document.getElementById("myBar").style.width = scrolled + "%";
+    }
+</script>
+
+<!-- Import d3 -->
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script>
+    d3_7 = d3
+    window.d3 = null
+</script>
+
+<script charset="utf-8" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
+<script>
+    d3_3 = d3
+    window.d3 = null
+</script>
+
+
+<!--Main-->
+<script src="js/main.js"></script>
+
+<!--Risk Ranking Visualization-->
+<script src="js/rankingVis.js"></script>
+
+<!--Anomalies Visualization-->
+<script src="./js/anomalies.js"></script>
+    
+<!-- CDD Plot -->
+<script src="./js/CDD.js"></script>
+
+<!-- Stacked Area chart Visualization objects -->
+<script src="./js/emissions/emissions.js"></script>
+<script src="./js/emissions/main.js"></script>
+
+<!--    Global Temp Vis -->
+<script src="./js/globalTemp/globalTempVis.js"></script>
+
+<!--Threejs globe scripts-->
+
+<script src="./js/globeEvents/three.js"></script>
+
+<script src="./js/globeEvents/GLTFLoader.js"></script>
+
+<script src="./js/globeEvents/orbit-controls.js"></script>
+
+<script  src="./js/globeEvents/globe.js"></script>
+
+<script src="./js/globeEvents/main.js"></script>
+
+<script src="./js/people.js"></script>
+
+</body>
+
+<div class="header">
+    <div class="progress-container">
+        <div class="progress-bar" id="myBar"></div>
+    </div>
+</div>
+
+</html>
