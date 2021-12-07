@@ -1,5 +1,0 @@
----
-title: "Reproducible Finance with R"
-site: distill::distill_website
-listing: posts
----
